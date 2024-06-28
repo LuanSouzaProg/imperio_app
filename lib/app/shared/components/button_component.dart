@@ -22,31 +22,34 @@ class ButtonComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        border: needBorder != null ? Border.all() : null,
-        color: background,
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            needIcon != null
-                ? Icon(icon, color: textColor)
-                : const SizedBox.shrink(),
-            needIcon != null
-                ? const SizedBox(width: 10)
-                : const SizedBox.shrink(),
-            Text(
-              text,
-              style: TextStyle(
-                color: textColor ?? Colors.black,
+    return InkWell(
+      onTap: onPressed,
+      child: Container(
+        height: 50,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: needBorder != null ? Border.all() : null,
+          color: background,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              needIcon != null
+                  ? Icon(icon, color: textColor)
+                  : const SizedBox.shrink(),
+              needIcon != null
+                  ? const SizedBox(width: 10)
+                  : const SizedBox.shrink(),
+              Text(
+                text,
+                style: TextStyle(
+                  color: textColor ?? Colors.black,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

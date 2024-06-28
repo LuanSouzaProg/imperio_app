@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../shared/components/button_component.dart';
 
@@ -12,7 +13,9 @@ class SocialAuthComponent extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: ButtonComponent(
-            onPressed: () {},
+            onPressed: () {
+              Modular.to.pushReplacementNamed('/home_module/');
+            },
             text: 'Entrar com Google',
             icon: Icons.email,
             needIcon: true,
