@@ -1,12 +1,17 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
+import 'data/repositories/matches/matches_repository.dart';
+import 'data/repositories/matches/matches_repository_impl.dart';
 import 'data/repositories/popular_championships/popular_championships_repository.dart';
 import 'data/repositories/popular_championships/popular_championships_repository_impl.dart';
 import 'data/repositories/sports_listing/sports_listing_repository_impl.dart';
 import 'data/repositories/sports_listing/sports_listing_repository.dart';
+import 'domain/services/matches/matches_service.dart';
+import 'domain/services/matches/matches_service_impl.dart';
 import 'domain/services/popular_championships/popular_championships_service.dart';
 import 'domain/services/popular_championships/popular_championships_service_impl.dart';
 import 'domain/services/sports_listing/sports_listing_service_impl.dart';
+import 'modules/home/bloc/matches_bloc/matches_bloc.dart';
 import 'modules/home/bloc/popular_championships_bloc/popular_championships_bloc.dart';
 import 'modules/home/bloc/sports_listing_bloc/sports_listing_bloc.dart';
 import 'domain/services/sports_listing/sports_listing_service.dart';
@@ -31,6 +36,9 @@ class AppModule extends Module {
         PopularChampionshipsRepositoryImpl.new);
     i.add<PopularChampionshipsService>(PopularChampionshipsServiceImpl.new);
     i.addSingleton(PopularChampionshipsBloc.new);
+    i.add<MatchesRepository>(MatchesRepositoryImpl.new);
+    i.add<MatchesService>(MatchesServiceImpl.new);
+    i.addSingleton(MatchesBloc.new);
   }
 
   @override

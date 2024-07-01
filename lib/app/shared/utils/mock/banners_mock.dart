@@ -10,7 +10,7 @@ var bannersMock = '''
           "id": 2,
           "name": "NBA",
           "subtitle" : "National Basketball Association",
-          "image": "assets/banners_img/banner.png"
+          "image": "assets/banners_img/banner2.png"
       },
       {
           "id": 3,

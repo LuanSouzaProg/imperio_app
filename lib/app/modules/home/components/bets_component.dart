@@ -1,37 +1,32 @@
 import 'package:flutter/material.dart';
 
-class BetsComponent extends StatefulWidget {
-  const BetsComponent({super.key});
+import '../../../domain/models/matche_model.dart';
 
-  @override
-  State<BetsComponent> createState() => _BetsComponentState();
-}
+class BetsComponent extends StatelessWidget {
+  final MatcheModel matcheModel;
 
-class _BetsComponentState extends State<BetsComponent> {
+  const BetsComponent({super.key, required this.matcheModel});
+
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        const Column(
+        Column(
           children: [
             Text(
-              'Casa',
-              style: TextStyle(
+              matcheModel.betHome.local,
+              style: const TextStyle(
                 fontSize: 12,
                 color: Colors.grey,
               ),
             ),
-            Text(
-              '1XBET',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
+            Image.asset(
+              matcheModel.betHome.image,
             ),
             Text(
-              '3.2',
-              style: TextStyle(
+              matcheModel.betHome.odd,
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
@@ -43,25 +38,21 @@ class _BetsComponentState extends State<BetsComponent> {
           width: 1,
           color: Colors.grey,
         ),
-        const Column(
+        Column(
           children: [
             Text(
-              'X',
-              style: TextStyle(
+              matcheModel.betIntermediate.local,
+              style: const TextStyle(
                 fontSize: 12,
                 color: Colors.grey,
               ),
             ),
-            Text(
-              'betsafeX',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
+            Image.asset(
+              matcheModel.betIntermediate.image,
             ),
             Text(
-              '2.6',
-              style: TextStyle(
+              matcheModel.betIntermediate.odd,
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
@@ -73,25 +64,21 @@ class _BetsComponentState extends State<BetsComponent> {
           width: 1,
           color: Colors.grey,
         ),
-        const Column(
+        Column(
           children: [
             Text(
-              'Fora',
-              style: TextStyle(
+              matcheModel.betAway.local,
+              style: const TextStyle(
                 fontSize: 12,
                 color: Colors.grey,
               ),
             ),
-            Text(
-              'betsson',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
+            Image.asset(
+              matcheModel.betAway.image,
             ),
             Text(
-              '3.4',
-              style: TextStyle(
+              matcheModel.betAway.odd,
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),

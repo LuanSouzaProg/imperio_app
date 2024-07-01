@@ -10,7 +10,7 @@ class PopularChampionshipsRepositoryImpl
   @override
   Future<ViewState> getPopularChampionships() async {
     try {
-      List<dynamic> championshipsJson = jsonDecode(popularChampionshipsModel);
+      List<dynamic> championshipsJson = jsonDecode(popularChampionshipsMock);
 
       List<PopularChampionshipModel> championships = championshipsJson
           .map((json) => PopularChampionshipModel.fromJson(json))

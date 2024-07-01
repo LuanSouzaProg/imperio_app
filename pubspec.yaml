@@ -68,6 +68,7 @@ flutter:
   assets:
     - assets/championships_img/
     - assets/icons_sports/
+    - assets/matches_img/
     - assets/banners_img/
     - assets/logo/
 

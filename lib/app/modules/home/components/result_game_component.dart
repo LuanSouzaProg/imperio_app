@@ -1,32 +1,37 @@
 import 'package:flutter/material.dart';
 
+import '../../../domain/models/matche_model.dart';
+
 class ResultGameComponent extends StatelessWidget {
-  const ResultGameComponent({super.key});
+  final MatcheModel matcheModel;
+
+  const ResultGameComponent({super.key, required this.matcheModel});
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          '2',
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
+          matcheModel.homeScore.toString(),
+          style: const TextStyle(
+            fontSize: 50,
+            fontWeight: FontWeight.w500,
           ),
         ),
-        Text(
+        const Text(
           ' : ',
           style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
+            fontSize: 40,
+            fontWeight: FontWeight.w500,
+            color: Colors.black54,
           ),
         ),
         Text(
-          '2',
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
+          matcheModel.awayScore.toString(),
+          style: const TextStyle(
+            fontSize: 50,
+            fontWeight: FontWeight.w500,
           ),
         ),
       ],

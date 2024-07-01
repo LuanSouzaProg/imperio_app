@@ -1,4 +1,4 @@
-var popularChampionshipsModel = '''
+var popularChampionshipsMock = '''
   [
       {
           "id": 1,

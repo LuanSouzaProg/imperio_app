@@ -17,7 +17,7 @@ var sportListing = '''
       },
       {
           "id": 4,
-          "name": "Jogos",
+          "name": "E-Sports",
           "image": "assets/icons_sports/controller.svg"
       }
   ]

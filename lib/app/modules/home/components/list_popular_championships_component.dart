@@ -18,7 +18,7 @@ class _ListPopularChampionshipsComponentState
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder(
+    return BlocBuilder<PopularChampionshipsBloc, PopularChampionshipsState>(
       bloc: popularChampionshipsBloc,
       builder: (context, state) {
         if (state is PopularChampionshipsInitialState) {
