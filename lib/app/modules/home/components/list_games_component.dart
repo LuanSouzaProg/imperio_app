@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imperio/app/modules/home/components/bets_component.dart';
 
 import 'result_game_component.dart';
 import 'teams_component.dart';
@@ -25,7 +26,7 @@ class _ListGamesComponentState extends State<ListGamesComponent> {
   void onItemTapped(int index) {
     pageController.animateToPage(
       index,
-      duration: const Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 100),
       curve: Curves.easeInOut,
     );
 
@@ -75,7 +76,7 @@ class _ListGamesComponentState extends State<ListGamesComponent> {
         ),
         const SizedBox(height: 16),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.5,
+          height: MediaQuery.of(context).size.height * 0.8,
           child: PageView.builder(
             itemCount: dates.length,
             controller: pageController,
@@ -92,7 +93,7 @@ class _ListGamesComponentState extends State<ListGamesComponent> {
                     child: Container(
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(30),
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
@@ -109,6 +110,20 @@ class _ListGamesComponentState extends State<ListGamesComponent> {
                           TeamsComponent(),
                           SizedBox(height: 20),
                           ResultGameComponent(),
+                          SizedBox(height: 20),
+                          BetsComponent(),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 20),
+                            child: Divider(),
+                          ),
+                          Text(
+                            'Ver mais',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.black54,
+                            ),
+                          ),
+                          SizedBox(height: 20),
                         ],
                       ),
                     ),
@@ -117,6 +132,33 @@ class _ListGamesComponentState extends State<ListGamesComponent> {
               );
             },
           ),
+        ),
+        const SizedBox(height: 16),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'Acompanhe todas as partidas',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: Colors.black54,
+              ),
+            ),
+            const SizedBox(width: 10),
+            ElevatedButton(
+              onPressed: () {},
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(
+                  Colors.yellow,
+                ),
+              ),
+              child: const Icon(
+                Icons.arrow_forward,
+                color: Colors.black,
+              ),
+            ),
+          ],
         ),
       ],
     );

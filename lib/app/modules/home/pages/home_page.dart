@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../components/list_popular_championships_component.dart';
 import '../components/list_banners_component.dart';
 import '../components/list_sports_component.dart';
 import '../components/list_games_component.dart';
+import '../components/list_tips_component.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,13 +19,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Império',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: SvgPicture.asset('assets/logo/imperio_logo.svg'),
         centerTitle: true,
       ),
       body: const SingleChildScrollView(
@@ -36,6 +32,8 @@ class _HomePageState extends State<HomePage> {
             ListPopularChampionshipsComponent(),
             SizedBox(height: 20),
             ListGamesComponent(),
+            SizedBox(height: 20),
+            ListTipsComponent(),
           ],
         ),
       ),
