@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:imperio/app/shared/utils/state.dart';
 
 import '../../../domain/models/banner_model.dart';
-import '../../../shared/utils/banners_mock.dart';
+import '../../../shared/utils/mock/banners_mock.dart';
 import 'banners_repository.dart';
 
 class BannersRepositoryImpl implements BannersRepository {

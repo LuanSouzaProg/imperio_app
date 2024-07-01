@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:imperio/app/shared/utils/state.dart';
 
-import '../../../shared/utils/sports_listing_mock.dart';
+import '../../../shared/utils/mock/sports_listing_mock.dart';
 import '../../../domain/models/sport_type_model.dart';
 import 'sports_listing_repository.dart';
 

@@ -1,8 +1,13 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
+import 'data/repositories/popular_championships/popular_championships_repository.dart';
+import 'data/repositories/popular_championships/popular_championships_repository_impl.dart';
 import 'data/repositories/sports_listing/sports_listing_repository_impl.dart';
 import 'data/repositories/sports_listing/sports_listing_repository.dart';
+import 'domain/services/popular_championships/popular_championships_service.dart';
+import 'domain/services/popular_championships/popular_championships_service_impl.dart';
 import 'domain/services/sports_listing/sports_listing_service_impl.dart';
+import 'modules/home/bloc/popular_championships_bloc/popular_championships_bloc.dart';
 import 'modules/home/bloc/sports_listing_bloc/sports_listing_bloc.dart';
 import 'domain/services/sports_listing/sports_listing_service.dart';
 import 'data/repositories/banners/banners_repository_impl.dart';
@@ -22,6 +27,10 @@ class AppModule extends Module {
     i.add<BannersRepository>(BannersRepositoryImpl.new);
     i.add<BannersService>(BannersServiceImpl.new);
     i.addSingleton(BannersBloc.new);
+    i.add<PopularChampionshipsRepository>(
+        PopularChampionshipsRepositoryImpl.new);
+    i.add<PopularChampionshipsService>(PopularChampionshipsServiceImpl.new);
+    i.addSingleton(PopularChampionshipsBloc.new);
   }
 
   @override

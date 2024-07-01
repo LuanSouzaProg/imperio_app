@@ -13,7 +13,7 @@ class SportsListingBloc extends Bloc<SportsListingEvent, SportsListingState> {
   SportsListingService sportsListingService = Modular.get();
 
   SportsListingBloc() : super(SportsListingInitialState()) {
-    on<GetSports>(
+    on<GetSportsEvent>(
       (event, emit) async {
         emit(SportsListingLoadingState());
         await handleGetSports(event, emit);

@@ -21,7 +21,7 @@ class _ListSportsComponentState extends State<ListSportsComponent> {
       bloc: sportsListingBloc,
       builder: (context, state) {
         if (state is SportsListingInitialState) {
-          sportsListingBloc.add(GetSports());
+          sportsListingBloc.add(GetSportsEvent());
         }
 
         if (state is SportsListingLoadingState) {

@@ -40,20 +40,23 @@ class _ListGamesComponentState extends State<ListGamesComponent> {
     return Column(
       children: [
         SizedBox(
-          height: 40,
+          height: 48,
           child: ListView.builder(
             itemCount: dates.length,
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () => onItemTapped(index),
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 20),
+                  padding: index == 0
+                      ? const EdgeInsets.only(left: 0)
+                      : const EdgeInsets.only(left: 20),
                   child: Container(
                     alignment: Alignment.center,
                     width: 80,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(100),
                       border: Border.all(),
                       color: indexSelect == index ? Colors.black : Colors.white,
                     ),
@@ -74,7 +77,7 @@ class _ListGamesComponentState extends State<ListGamesComponent> {
             },
           ),
         ),
-        const SizedBox(height: 16),
+        const SizedBox(height: 8),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.8,
           child: PageView.builder(

@@ -5,4 +5,4 @@ class SportsListingEvent extends Equatable {
   List<Object?> get props => [];
 }
 
-class GetSports extends SportsListingEvent {}
+class GetSportsEvent extends SportsListingEvent {}
