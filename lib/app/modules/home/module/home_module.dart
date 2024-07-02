@@ -5,6 +5,7 @@ import '../bloc/popular_championships_bloc/popular_championships_bloc.dart';
 import '../bloc/sports_listing_bloc/sports_listing_bloc.dart';
 import '../bloc/banners_bloc/banners_bloc.dart';
 import '../bloc/matches_bloc/matches_bloc.dart';
+import '../bloc/tips_bloc/tips_bloc.dart';
 import '../pages/home_page.dart';
 
 class HomeModule extends Module {
@@ -20,6 +21,7 @@ class HomeModule extends Module {
         SportsListingBloc sportsListingBloc = Modular.get();
         BannersBloc bannersBloc = Modular.get();
         MatchesBloc matchesBloc = Modular.get();
+        TipsBloc tipsBloc = Modular.get();
 
         return MultiBlocProvider(
           providers: [
@@ -27,6 +29,7 @@ class HomeModule extends Module {
             BlocProvider.value(value: sportsListingBloc),
             BlocProvider.value(value: bannersBloc),
             BlocProvider.value(value: matchesBloc),
+            BlocProvider.value(value: tipsBloc),
           ],
           child: const HomePage(),
         );

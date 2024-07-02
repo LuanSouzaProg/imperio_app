@@ -145,7 +145,7 @@ class _ListGamesComponentState extends State<ListGamesComponent> {
                                     ),
                                     const Padding(
                                       padding:
-                                          EdgeInsets.symmetric(horizontal: 20),
+                                          EdgeInsets.symmetric(horizontal: 16),
                                       child: Divider(),
                                     ),
                                     const Text(
@@ -153,9 +153,10 @@ class _ListGamesComponentState extends State<ListGamesComponent> {
                                       style: TextStyle(
                                         fontSize: 12,
                                         color: Colors.black54,
+                                        fontWeight: FontWeight.w600,
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    const SizedBox(height: 24),
                                   ],
                                 ),
                               ),
@@ -180,7 +181,7 @@ class _ListGamesComponentState extends State<ListGamesComponent> {
               'Acompanhe todas as partidas',
               style: TextStyle(
                 fontSize: 14,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w700,
                 color: Colors.black54,
               ),
             ),

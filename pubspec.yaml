@@ -70,6 +70,7 @@ flutter:
     - assets/icons_sports/
     - assets/matches_img/
     - assets/banners_img/
+    - assets/tips_img/
     - assets/logo/
 
   # An image asset can refer to one or more resolution-specific "variants", see

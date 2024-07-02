@@ -10,7 +10,7 @@ class BetsComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Column(
           children: [
@@ -23,11 +23,12 @@ class BetsComponent extends StatelessWidget {
             ),
             Image.asset(
               matcheModel.betHome.image,
+              height: 20,
             ),
             Text(
               matcheModel.betHome.odd,
               style: const TextStyle(
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w500,
                 fontSize: 16,
               ),
             ),
