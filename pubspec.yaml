@@ -68,6 +68,7 @@ flutter:
   assets:
     - assets/championships_img/
     - assets/betting_bonus/
+    - assets/latest_best/
     - assets/icons_sports/
     - assets/matches_img/
     - assets/banners_img/

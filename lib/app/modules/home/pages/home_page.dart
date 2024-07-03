@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../components/betting_bonus_component.dart';
+import '../components/list_latest_bets_component.dart';
 import '../components/list_popular_championships_component.dart';
 import '../components/list_banners_component.dart';
 import '../components/list_sports_component.dart';
@@ -37,6 +38,9 @@ class _HomePageState extends State<HomePage> {
             ListTipsComponent(),
             SizedBox(height: 32),
             BettingBonusComponent(),
+            SizedBox(height: 32),
+            ListLatestBetsComponent(),
+            SizedBox(height: 22),
           ],
         ),
       ),
