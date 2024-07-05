@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../shared/components/button_component.dart';
 
@@ -17,7 +18,9 @@ class SocialAuthComponent extends StatelessWidget {
               Modular.to.pushReplacementNamed('/home_module/');
             },
             text: 'Entrar com Google',
-            icon: Icons.email,
+            icon: SvgPicture.asset(
+              'assets/onboarding/google.svg',
+            ),
             needIcon: true,
             background: Colors.grey.shade400,
             textColor: Colors.black,
@@ -29,7 +32,9 @@ class SocialAuthComponent extends StatelessWidget {
           child: ButtonComponent(
             onPressed: () {},
             text: 'Entrar com Apple',
-            icon: Icons.email,
+            icon: SvgPicture.asset(
+              'assets/onboarding/apple.svg',
+            ),
             needIcon: true,
             background: Colors.black,
             textColor: Colors.white,

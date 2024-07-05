@@ -10,10 +10,13 @@ class HeaderComponent extends StatelessWidget {
         top: 8,
       ),
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.4,
+        height: MediaQuery.of(context).size.height * 0.45,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          color: Colors.amber,
+          image: const DecorationImage(
+            image: AssetImage('assets/onboarding/image.png'),
+            fit: BoxFit.cover,
+          ),
           borderRadius: BorderRadius.circular(20),
         ),
         child: const Padding(
@@ -25,13 +28,17 @@ class HeaderComponent extends StatelessWidget {
               Text(
                 'Entre',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 24,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               Text(
                 'em sua conta',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 24,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               SizedBox(height: 6),
@@ -39,12 +46,16 @@ class HeaderComponent extends StatelessWidget {
                 'Acompanhe seus jogos,',
                 style: TextStyle(
                   fontSize: 12,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
               Text(
                 'campeonatos e times favoritos',
                 style: TextStyle(
                   fontSize: 12,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
             ],

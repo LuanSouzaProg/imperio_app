@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ButtonComponent extends StatelessWidget {
   final Function() onPressed;
-  final IconData? icon;
+  final Widget? icon;
   final bool? needIcon;
   final bool? needBorder;
   final Color background;
@@ -27,7 +27,7 @@ class ButtonComponent extends StatelessWidget {
       child: Container(
         height: 50,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(24),
           border: needBorder != null ? Border.all() : null,
           color: background,
         ),
@@ -37,15 +37,17 @@ class ButtonComponent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               needIcon != null
-                  ? Icon(icon, color: textColor)
+                  ? icon ?? const SizedBox()
                   : const SizedBox.shrink(),
               needIcon != null
-                  ? const SizedBox(width: 10)
+                  ? const SizedBox(width: 20)
                   : const SizedBox.shrink(),
               Text(
                 text,
                 style: TextStyle(
                   color: textColor ?? Colors.black,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 12,
                 ),
               ),
             ],

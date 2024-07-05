@@ -14,7 +14,13 @@ class AuthDividerComponent extends StatelessWidget {
         ),
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 15),
-          child: Text('ou entre com'),
+          child: Text(
+            'ou entre com',
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
         ),
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.3,
