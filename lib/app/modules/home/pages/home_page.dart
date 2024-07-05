@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../components/betting_bonus_component.dart';
+import '../components/drawer_component.dart';
 import '../components/list_latest_bets_component.dart';
 import '../components/list_popular_championships_component.dart';
 import '../components/list_banners_component.dart';
@@ -24,6 +25,7 @@ class _HomePageState extends State<HomePage> {
         title: SvgPicture.asset('assets/logo/imperio_logo.svg'),
         centerTitle: true,
       ),
+      drawer: const DrawerComponent(),
       body: const SingleChildScrollView(
         child: Column(
           children: [
