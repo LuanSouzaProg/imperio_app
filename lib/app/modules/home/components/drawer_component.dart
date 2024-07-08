@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class DrawerComponent extends StatelessWidget {
@@ -77,7 +80,12 @@ class DrawerComponent extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           item(context, 'Início', 'assets/drawer/home_Regular_1.svg'),
-          item(context, 'Esportes', 'assets/icons_sports/Whistle.svg'),
+          GestureDetector(
+            onTap: () {
+              Modular.to.pushNamed('/sports_module');
+            },
+            child: item(context, 'Esportes', 'assets/icons_sports/Whistle.svg'),
+          ),
           item(context, 'Noticias e Dicas', 'assets/drawer/Bookmark.svg'),
           item(context, 'Favoritos', 'assets/drawer/Star.svg'),
           item(context, 'Influenciadores', 'assets/drawer/Users_1.svg'),
@@ -94,29 +102,25 @@ class DrawerComponent extends StatelessWidget {
   }
 
   Widget item(BuildContext context, String title, String icon) {
-    return InkWell(
-      onTap: () {},
-      child: Padding(
-        padding:
-            const EdgeInsets.symmetric(horizontal: 16).copyWith(bottom: 20),
-        child: Row(
-          children: [
-            SvgPicture.asset(
-              icon,
-              height: 16,
-              // ignore: deprecated_member_use
-              color: Colors.grey.shade700,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16).copyWith(bottom: 20),
+      child: Row(
+        children: [
+          SvgPicture.asset(
+            icon,
+            height: 16,
+            // ignore: deprecated_member_use
+            color: Colors.grey.shade700,
+          ),
+          const SizedBox(width: 16),
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
             ),
-            const SizedBox(width: 16),
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
