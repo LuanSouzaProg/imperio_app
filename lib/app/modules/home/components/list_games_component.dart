@@ -111,53 +111,58 @@ class _ListGamesComponentState extends State<ListGamesComponent> {
                           physics: const NeverScrollableScrollPhysics(),
                           itemCount: 2,
                           itemBuilder: (context, index) {
-                            return Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 10)
-                                      .copyWith(bottom: 20),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(30),
-                                  color: Colors.white,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.15),
-                                      spreadRadius: 2,
-                                      blurRadius: 8,
-                                      offset: const Offset(4, 4),
-                                    ),
-                                  ],
-                                ),
-                                child: Column(
-                                  children: [
-                                    const SizedBox(height: 24),
-                                    TeamsComponent(
-                                      matcheModel: item[index],
-                                    ),
-                                    const SizedBox(height: 14),
-                                    ResultGameComponent(
-                                      matcheModel: item[index],
-                                    ),
-                                    const SizedBox(height: 14),
-                                    BetsComponent(
-                                      matcheModel: item[index],
-                                    ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 16),
-                                      child: Divider(),
-                                    ),
-                                    const Text(
-                                      'Ver mais',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
+                            return GestureDetector(
+                              onTap: () {
+                                Modular.to.pushNamed('/matche_module/');
+                              },
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10)
+                                        .copyWith(bottom: 20),
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(30),
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.15),
+                                        spreadRadius: 2,
+                                        blurRadius: 8,
+                                        offset: const Offset(4, 4),
                                       ),
-                                    ),
-                                    const SizedBox(height: 24),
-                                  ],
+                                    ],
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      const SizedBox(height: 24),
+                                      TeamsComponent(
+                                        matcheModel: item[index],
+                                      ),
+                                      const SizedBox(height: 14),
+                                      ResultGameComponent(
+                                        matcheModel: item[index],
+                                      ),
+                                      const SizedBox(height: 14),
+                                      BetsComponent(
+                                        matcheModel: item[index],
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 16),
+                                        child: Divider(),
+                                      ),
+                                      const Text(
+                                        'Ver mais',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 24),
+                                    ],
+                                  ),
                                 ),
                               ),
                             );

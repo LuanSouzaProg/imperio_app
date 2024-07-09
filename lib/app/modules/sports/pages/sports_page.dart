@@ -19,7 +19,13 @@ class _SportsPageState extends State<SportsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(''),
+        title: const Text(
+          'Esportes',
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
       ),
       body: BlocBuilder<SportsBloc, SportsState>(
         bloc: sportsBloc,

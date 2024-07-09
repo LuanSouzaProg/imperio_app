@@ -32,6 +32,7 @@ import 'modules/home/bloc/tips_bloc/tips_bloc.dart';
 import 'domain/services/tips/tips_service.dart';
 import 'modules/auth/module/auth_module.dart';
 import 'modules/home/module/home_module.dart';
+import 'modules/matche/module/matche_module.dart';
 import 'modules/sports/bloc/sports_bloc.dart';
 import 'modules/sports/module/sports_module.dart';
 
@@ -65,5 +66,6 @@ class AppModule extends Module {
     r.module('/', module: AuthModule());
     r.module('/home_module', module: HomeModule());
     r.module('/sports_module', module: SportsModule());
+    r.module('/matche_module', module: MatcheModule());
   }
 }

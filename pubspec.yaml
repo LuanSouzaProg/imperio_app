@@ -71,6 +71,7 @@ flutter:
     - assets/icons_sports/
     - assets/latest_best/
     - assets/matches_img/
+    - assets/matche/
     - assets/banners_img/
     - assets/onboarding/
     - assets/tips_img/
